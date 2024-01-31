@@ -23,7 +23,7 @@ Contributeur :
     Assurez-vous d'avoir Python installé sur votre système.
     Clonez ce dépôt dans votre environnement local.
     Installez les dépendances requises en exécutant pip install -r requirements.txt.
-    Exécutez le fichier main.py en utilisant la commande python main.py.
+    Exécutez le fichier main.py en utilisant la commande python main.py. (> python3 main.py)
 
 ### Remarques
     Dans notre projet, le fichier main.py tourne sur l'url de base qu'est 'https://ensai.fr/'. Une potentielle amélioration de notre projet aurait été de permettre à l'utilisateur de définir son url de base grâce à des librairies comme sysargv : > main.py 'url'
@@ -33,18 +33,18 @@ Contributeur :
 
 ### Explication du code
 
-Pour mettre en place notre crawler, nous avons conçu une classe nommée `Crawler`. Cette classe est chargée de parcourir les pages web à partir d'une URL de départ fournie par l'utilisateur. 
+Pour mettre en place notre crawler, nous avons conçu une classe nommée `Crawler`. Cette classe est chargée de parcourir les pages web à partir d'une URL de départ. 
 
 #### Initialisation et Paramètres
 
 Lors de l'initialisation de la classe `Crawler`, plusieurs paramètres peuvent être configurés :
 
 - **URL de départ (`seed_url`)** : L'URL à partir de laquelle le crawling commence.
-- **Nombre maximum de pages à crawler (`max_urls`)** : Limite le nombre de pages que le crawler peut visiter.
+- **Nombre maximum de pages à crawler (`max_urls`)** : Limite le nombre de pages que le crawler peut visiter. Par défaut est à 250
 - **Nombre maximum d'URLs à extraire par page (`max_urls_per_page`)** : Limite le nombre d'URLs à extraire à partir de chaque page visitée.
-- **Délai entre les requêtes (`delay`)** : Attente entre chaque requête pour éviter la surcharge des serveurs.
-- **Nombre de threads (`num_threads`)** : Contrôle le nombre de threads utilisés pour le crawling.
-- **Nom du fichier de la base de données SQLite (`db_file`)** : Spécifie le fichier de base de données dans lequel les informations des pages seront stockées.
+- **Délai entre les requêtes (`delay`)** : Attente entre chaque requête pour éviter la surcharge des serveurs. Par défaut est à 3 et ne peut excéder 3 par politeness
+- **Nombre de threads (`num_threads`)** : Contrôle le nombre de threads utilisés pour le crawling. Par défaut est à 5
+- **Nom du fichier de la base de données SQLite (`db_file`)** : Spécifie le fichier de base de données dans lequel les informations des pages seront stockées. Par défaut est 'mywebpages'
 
 #### Utilisation du Multi-threading
 
@@ -56,7 +56,7 @@ Le crawler respecte les directives des fichiers `robots.txt` en utilisant la cla
 
 #### Utilisation des Sitemaps
 
-Le crawler explore également les sitemaps pour identifier de nouvelles pages à crawler. Il récupère les URLs à partir des sitemaps fournis par les sites web, permettant ainsi une exploration plus exhaustive et systématique du contenu.
+Le crawler explore également les sitemaps pour identifier de nouvelles pages à crawler. Il récupère les URLs à partir des sitemaps fournis par les sites web depuis le fichier robots.txt , permettant ainsi une exploration plus exhaustive et systématique du contenu.
 
 #### Extraction et Stockage des Informations
 
