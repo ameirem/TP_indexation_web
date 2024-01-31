@@ -23,7 +23,7 @@ Contributeur :
     Assurez-vous d'avoir Python installé sur votre système.
     Clonez ce dépôt dans votre environnement local.
     Installez les dépendances requises en exécutant pip install -r requirements.txt.
-    Exécutez le fichier main.py en utilisant la commande python main.py. (> python3 main.py)
+    Exécutez le fichier main.py en utilisant la commande python main.py. (ou > python3 main.py)
 
 ### Remarques
     Dans notre projet, le fichier main.py tourne sur l'url de base qu'est 'https://ensai.fr/'. Une potentielle amélioration de notre projet aurait été de permettre à l'utilisateur de définir son url de base grâce à des librairies comme sysargv : > main.py 'url'
