@@ -49,7 +49,7 @@ class DatabaseManager:
         except sqlite3.IntegrityError:
             pass  # Ignore les entrées en double
         finally:
-            conn.close()  # Assurez-vous de fermer la connexion après chaque opération
+            conn.close()  
 
     def close(self):
         """
