@@ -20,11 +20,13 @@ Le projet est organisé en plusieurs fichiers, chacun ayant une fonction spécif
 
 - **`build_stemmed_index(documents)`**: Cette fonction construit un index non positionnel stemmé en appliquant le stemming aux titres des documents avant de construire l'index. Elle utilise la fonction `apply_stemming` définie dans `data_processing.py`.
 
-- **`build_positional_index(data)`**: Cette fonction construit un index positionnel à partir des titres des documents. Elle associe chaque token à la liste des documents dans lesquels il apparaît, ainsi qu'à la position de chaque occurrence dans le titre.
+- **`build_positional_index(data)`** : Cette fonction construit un index positionnel à partir des titres des documents. Elle associe chaque token à la liste des documents dans lesquels il apparaît, ainsi qu'à la position de chaque occurrence dans le titre.
 
 - **`build_content_pos_index(data)`**: Cette fonction construit un index positionnel pour le contenu des documents. Elle fonctionne de manière similaire à `build_positional_index`, mais elle utilise le contenu des documents au lieu des titres.
 
 - **`apply_stemming(text)`**: Cette fonction applique le stemming à un texte en français en utilisant la bibliothèque NLTK.
+
+- **`calculate_statistics(documents)`** : Cette fonction permet de calculer des statistiques à partir de nos documents et renvoit un fichier json de metadat. Ainsi on retrouve dans ce fichier le nombre de documents, le nombre total de tokens dans le document ainsi que par champ, la moyenne de tokens par article, le nombre de token minimal et maximal dans tous les articles et un décompte d'occurences des tokens.                         
 
 ## Exécution du Programme
 

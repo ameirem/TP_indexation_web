@@ -18,7 +18,7 @@ def save_json_file(data, file_path):
         json.dump(data, file, indent=4)
 
 def calculate_statistics(documents):
-    # Initialize data structures for the statistics
+    # Initialiser les structures de données pour les statistiques
     total_tokens = 0
     num_documents = len(documents)
     token_counts = defaultdict(int)
@@ -26,35 +26,35 @@ def calculate_statistics(documents):
     min_tokens = float('inf')
     max_tokens = 0
 
-    # Iterate through the documents to calculate statistics
+    # Parcourir les documents pour calculer les statistiques
     for document in documents:
         title = document['title']
         content = document['content']
         url = document['url']
         h1 = document['h1']
-        # Tokenize the fields
+        # Tokeniser les champs
         title_tokens = word_tokenize(title.lower())
         content_tokens = word_tokenize(content.lower())
         url_tokens = word_tokenize(url.lower())
         h1_tokens = word_tokenize(h1.lower())
-        # Update statistics for tokens per field
+        # Mettre à jour les statistiques pour les tokens par champ
         tokens_per_field['title'] += len(title_tokens)
         tokens_per_field['content'] += len(content_tokens)
         tokens_per_field['url'] += len(url_tokens)
         tokens_per_field['h1'] += len(h1_tokens)
-        # Update min and max tokens
+        # Mettre à jour les tokens min et max
         min_tokens = min(min_tokens, len(content_tokens))
         max_tokens = max(max_tokens, len(content_tokens))
-        # Update token counts
+        # Mettre à jour les comptes de tokens
         for token in title_tokens:
             token_counts[token] += 1
 
     total_tokens = sum(tokens_per_field.values())
 
-    # Calculate average tokens per document
+    # Calculer les tokens moyens par document
     avg_tokens_per_document = tokens_per_field['content'] / num_documents
 
-    # Create statistics dictionary
+    # Créer un dictionnaire de statistiques
     statistics = {
         'num_documents': num_documents,
         'total_tokens': total_tokens,
@@ -67,5 +67,3 @@ def calculate_statistics(documents):
     
     save_json_file(statistics,'metadata.json')
     return statistics
-
-

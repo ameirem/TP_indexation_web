@@ -5,7 +5,7 @@ from index_builder import build_content_pos_index,build_non_positional_index,bui
 def main():
     # Charger les données à partir du fichier JSON
     crawled_urls = load_json_file('crawled_urls.json')
-    # Construire l'index non positionnel
+    # Construire l'index non positionnel et les metadonnées
     build_non_positional_index(crawled_urls)
     calculate_statistics(crawled_urls)
      # Construire l'index positionnel
