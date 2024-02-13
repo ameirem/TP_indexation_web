@@ -1,4 +1,4 @@
-# Projet de Classement des Requêtes
+# Projet d'Expansion de requête et de ranking
 
 Ce projet offre un système de classement de documents en fonction des requêtes des utilisateurs. Il repose sur une analyse approfondie des contenus des articles et des critères de pertinence pour fournir des résultats précis et adaptés aux besoins des utilisateurs.
 
