@@ -48,7 +48,7 @@ def main():
 
     # Enregistrer les résultats au format JSON
     with open('results.json', 'w') as json_file:
-        json.dump({"Resultats": output_results, "Total_documents": total_documents, "Documents_filtrés": filtered_documents_count}, json_file, indent=4)
+        json.dump({"Resultats": output_results, "Total_documents": total_documents, "Documents_filtres": filtered_documents_count}, json_file, indent=4)
 
     print("Les résultats ont été enregistrés dans 'results.json'.")
 
