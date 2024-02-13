@@ -36,13 +36,13 @@ Le score de classement d'un document est calculé en tenant compte de plusieurs 
 
 La formule de calcul du score de classement est la suivante :
 
-\[ \text{score} = \alpha \times \text{BM25 du Titre} + \beta \times \text{BM25 du Contenu} + \gamma \times \text{Nombre d'Occurences des Tokens} + \epsilon \times \text{Similarité des Langues} \]
+$$[ \text{score} = \alpha \times \text{BM25 du Titre} + \beta \times \text{BM25 du Contenu} + \gamma \times \text{Nombre d'Occurences des Tokens} + \epsilon \times \text{Similarité des Langues} $$
 
-- \(\alpha\), \(\beta\), \(\gamma\) et \(\epsilon\) sont des poids pour ajuster l'importance relative de chaque critère par rapport à la requête. 
+- $\alpha$, $\beta$, $\gamma$ et $\epsilon$ sont des poids pour ajuster l'importance relative de chaque critère par rapport à la requête. 
 
 - Le score final est une combinaison linéaire de ces facteurs, avec des pondérations adaptées pour chaque aspect du classement.
 
-- Par défaut, nous accordons plus d'importance au score du titre qu'à celui du contenu. Ainsi, \(\alpha = 20\), \(\beta = 10\), \(\gamma = 10\), \(\epsilon = 20\).
+- Par défaut, nous accordons plus d'importance au score du titre qu'à celui du contenu. Ainsi, $\alpha = 20$, $\beta = 10$, $\gamma = 10$, $\epsilon = 20$.
 
 - Les tokens ayant du sens sont uniquement considéré et non les stopwords.
 
@@ -61,8 +61,9 @@ La formule de calcul du score de classement est la suivante :
 4. **Consultation des Résultats** : Une fois la requête traitée, les résultats seront stockés dans un fichier JSON (`results.json`). Chaque document est présenté avec son titre et son URL. Les résultats incluent également le nombre total de documents dans l'index et le nombre de documents filtrés.
 
 ## Remarques
+- Nous avons utilisé les données fournies pour réaliser le projet 
 
-- La détection automatique de la langue garantit des résultats précis et adaptés à une variété de requêtes. Nous avons effectué une analyse des langues de notre fichier contenant les documents, expliquant ainsi notre approche dans le code.
+- La détection automatique de la langue garantit des résultats précis et adaptés à une variété de requêtes. Nous avons effectué une analyse des langues de notre fichier contenant les documents, expliquant ainsi notre approche dans le code. L'analyse se trouve dans le fichier `analyse_langues.ipynb`
 
 - Le système est conçu pour être extensible et peut être facilement adapté pour prendre en charge de nouvelles fonctionnalités et améliorations.
 
