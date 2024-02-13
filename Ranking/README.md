@@ -36,7 +36,7 @@ Le score de classement d'un document est calculé en tenant compte de plusieurs 
 
 La formule de calcul du score de classement est la suivante :
 
-$$[ \text{score} = \alpha \times \text{BM25 du Titre} + \beta \times \text{BM25 du Contenu} + \gamma \times \text{Nombre d'Occurences des Tokens} + \epsilon \times \text{Similarité des Langues} $$
+$$ \text{score} = \alpha \times \text{BM25 du Titre} + \beta \times \text{BM25 du Contenu} + \gamma \times \text{Nombre d'Occurences des Tokens} + \epsilon \times \text{Similarité des Langues} $$
 
 - $\alpha$, $\beta$, $\gamma$ et $\epsilon$ sont des poids pour ajuster l'importance relative de chaque critère par rapport à la requête. 
 
