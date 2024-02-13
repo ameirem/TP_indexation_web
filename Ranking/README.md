@@ -10,7 +10,7 @@ Ce projet offre un système de classement de documents en fonction des requêtes
 
 - **Création d'une fonction de classement linéaire pour ordonner les documents filtrés** : Les documents sont classés selon un score de pertinence calculé à l'aide de différents critères.
 
-- **Renvoi des résultats au format JSON, incluant le nombre total de documents et le nombre de documents filtrés** : Les résultats sont présentés de manière structurée pour une consultation facile par l'utilisateur.
+- **Renvoi des résultats au format JSON, incluant le nombre total de documents et le nombre de documents filtrés** : Les résultats sont présentés de manière structurée dans un fichier json pour une consultation facile par l'utilisateur.
 
 ## Structure du Code
 
