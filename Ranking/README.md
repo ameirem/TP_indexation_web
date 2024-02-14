@@ -54,7 +54,9 @@ $$ \text{score} = \alpha \times \text{BM25 du Titre} + \beta \times \text{BM25 d
 
 3. **Exécution du Programme** : Vous pouvez lancer le programme de deux manières : 
     - En exécutant le fichier `main.py` avec la commande `python main.py`. Vous serez alors invité à saisir votre requête et à spécifier l'opérateur logique (AND ou OR).
-    - En exécutant le fichier `main.py` avec la commande `python main.py <requête> --operator <operateur>` ou `python main.py <requête> -op <operateur>`. L'opérateur par défaut est 'AND'. 
+    - En exécutant le fichier `main.py` avec la commande `python main.py <requête> --operator <operateur>` ou `python main.py <requête> -op <operateur>`. 
+    
+    L'opérateur par défaut est 'AND'. 
     
     Assurez-vous d'utiliser la commande `python3` selon votre interpréteur Python.
 
